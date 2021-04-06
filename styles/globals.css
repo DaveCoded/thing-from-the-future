@@ -5,6 +5,10 @@
          url('/fonts/Futura-CondensedMedium.ttf')  format('truetype')
 }
 
+:root {
+    --focus-color: rgb(235, 107, 21);
+}
+
 html,
 body {
   padding: 0;
@@ -24,4 +28,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.generate-button {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding: 1.1rem 2rem;
+    border: 2px solid white;
+    text-transform: uppercase;
+    border-radius: 6px;
+    width: 190px;
+    height: 56px;
+    box-shadow: black 0px 0px 0px 4px;
+}
+
+button.generate-button:focus {
+    outline: none;
+    box-shadow: black 0px 0px 0px 4px, var(--focus-color) 0px 0px 0px 7px;
 }

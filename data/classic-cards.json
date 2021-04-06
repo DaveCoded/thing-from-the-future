@@ -1,10 +1,8 @@
 {
-    "arc": [
-        {
-            "value": ["collapse", "discipline", "grow", "transform"],
-            "durations": ["a few years", "a decade", "a generation", "two generations", "a century", "a millenium"]
-        }
-    ],
+    "arc": {
+        "values": ["collapse", "discipline", "grow", "transform"],
+        "durations": ["a few years", "a decade", "a generation", "two generations", "a century", "a millenium"]
+    },
     "terrain": [
         "agriculture",
         "the brain",
@@ -61,10 +59,7 @@
         "work",
         "zombies",
         "the zoo",
-        {
-            "value": "wildcard",
-            "message": "topic or location of your choice"
-        }
+        "wildcard"
     ],
     "object": [
         "advertisement",
@@ -123,10 +118,7 @@
         "vehicle",
         "video",
         "weapon",
-        {
-            "value": "wildcard",
-            "message": "artifact of your choice"
-        }
+        "wildcard"
     ],
     "mood": [
         "admiration",

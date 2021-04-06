@@ -1,19 +1,17 @@
 import BaseCard from './BaseCard'
-import { MoodCard } from '../types/cardTypes'
+import styles from './ObjectCard.module.css' // same styles as object card
 
 interface Props {
-    details: MoodCard
+    value: string
 }
 
-const MoodCard = ({ details }: Props) => {
-    const { value, variation } = details
-
-    return (
-        <BaseCard>
-            <h3>{variation}</h3>
-            <p>{value}</p>
-        </BaseCard>
-    )
-}
+const MoodCard = ({ value }: Props) => (
+    <BaseCard backgroundColor="#AB75AF">
+        <div className={styles.Container}>
+            <p>Mood</p>
+            <h3>{value}</h3>
+        </div>
+    </BaseCard>
+)
 
 export default MoodCard

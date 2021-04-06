@@ -23,3 +23,15 @@ export type ObjectCard = {
     variation: 'object'
     value: string | Wildcard
 }
+
+export type CardType = 'arc' | 'object' | 'terrain' | 'mood'
+
+export type CardData = {
+    arc: {
+        values: string[]
+        durations: string[]
+    }
+    object: string[]
+    terrain: string[]
+    mood: string[]
+}

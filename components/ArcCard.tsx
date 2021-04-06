@@ -1,16 +1,19 @@
 import BaseCard from './BaseCard'
-import { ArcCard } from '../types/cardTypes'
 
 interface Props {
-    details: ArcCard
+    value: string
+    duration: string
 }
 
-const ArcCard = ({ details: { value, variation, duration } }: Props) => (
-    <BaseCard>
-        <h3>{variation}</h3>
-        <p>{value}</p>
-        <p>{duration}</p>
+const ArcCard = ({ value, duration }: Props) => (
+    <BaseCard backgroundColor="#7DBF30">
+        <div>
+            <p>Arc</p>
+            <h3>{value}</h3>
+            <p>{duration}</p>
+        </div>
     </BaseCard>
 )
 
 export default ArcCard
+
