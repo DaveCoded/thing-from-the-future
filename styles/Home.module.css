@@ -51,7 +51,6 @@
     margin-bottom: 2.6rem;
     line-height: 1.15;
     font-size: 4rem;
-    text-transform: capitalize;
 }
 
 .subtitle {
@@ -86,7 +85,6 @@
 }
 
 .howToPlay {
-    text-decoration: underline;
 }
 
 .code {

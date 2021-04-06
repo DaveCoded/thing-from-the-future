@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export default function Home() {
     return (
@@ -11,7 +12,13 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>The thing from the future</h1>
+                <motion.h1
+                    className={styles.title}
+                    layoutId="ttftf-title"
+                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                >
+                    The Thing From the Future
+                </motion.h1>
                 <h2 className={styles.subtitle}>A game for imagining potential futures.</h2>
                 <p className={styles.description}>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt

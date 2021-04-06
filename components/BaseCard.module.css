@@ -13,6 +13,7 @@
 }
 
 .BaseCard p {
+    font-family: 'Futura Condensed';
     color: white;
     font-size: 17px;
     letter-spacing: 1.8px;
