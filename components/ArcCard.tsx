@@ -16,4 +16,3 @@ const ArcCard = ({ value, duration }: Props) => (
 )
 
 export default ArcCard
-

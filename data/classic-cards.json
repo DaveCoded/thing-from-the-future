@@ -1,7 +1,14 @@
 {
     "arc": {
         "values": ["collapse", "discipline", "grow", "transform"],
-        "durations": ["a few years", "a decade", "a generation", "two generations", "a century", "a millenium"]
+        "durations": [
+            "a few years",
+            "a decade",
+            "a generation",
+            "two generations",
+            "a century",
+            "a millenium"
+        ]
     },
     "terrain": [
         "agriculture",

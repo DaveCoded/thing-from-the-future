@@ -10,16 +10,17 @@ const ObjectCard = ({ value }: Props) => (
         <div className={styles.Container}>
             <p>Object</p>
             <h3>{value}</h3>
-            {value === 'wildcard' ?
-                <p style={{
-                    position: 'relative',
-                    top: '35px',
-                    textTransform: 'lowercase'
-                }}>
+            {value === 'wildcard' ? (
+                <p
+                    style={{
+                        position: 'relative',
+                        top: '35px',
+                        textTransform: 'lowercase'
+                    }}
+                >
                     artifact of your choice
                 </p>
-                : null
-            }
+            ) : null}
         </div>
     </BaseCard>
 )

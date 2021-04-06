@@ -1,5 +1,5 @@
 export type Wildcard = {
-    value: 'wildcard',
+    value: 'wildcard'
     message: string
 }
 
@@ -15,7 +15,7 @@ export type TerrainCard = {
 
 export type ArcCard = {
     variation: 'arc'
-    value: 'collapse' | 'discipline' | 'grow' |  'transform'
+    value: 'collapse' | 'discipline' | 'grow' | 'transform'
     duration: string
 }
 

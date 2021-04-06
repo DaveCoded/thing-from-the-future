@@ -1,7 +1,7 @@
-import { CardData } from "../types/cardTypes";
+import { CardData } from '../types/cardTypes'
 
 export function getRandomArbitrary(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min) + min)
 }
 
 export function getCard(cardType: 'object' | 'mood', data: CardData): string {
@@ -20,7 +20,7 @@ export function getTerrainCard(data: CardData) {
 }
 
 export function getArcCard(data: CardData) {
-    const {values, durations} = data.arc
+    const { values, durations } = data.arc
     const arcValue = values[getRandomArbitrary(0, values.length)]
     const arcDuration = durations[getRandomArbitrary(0, durations.length)]
     return { arcValue, arcDuration }
