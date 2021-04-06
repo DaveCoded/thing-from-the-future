@@ -12,21 +12,19 @@ export default function Home() {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>The thing from the future</h1>
-                <div>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt
-                        suscipit illo id odio repellendus culpa excepturi, illum ducimus. Nobis,
-                        iure? Ipsam nihil deserunt quas dolorum ullam! Reprehenderit nobis ex quasi
-                        nesciunt necessitatibus beatae est, asperiores modi, dolore similique ea
-                        ducimus eum cum nam facere dolor dolorem saepe libero facilis.
-                    </p>
-                    <Link href="/play">
-                        <button className="generate-button">play now</button>
-                    </Link>
-                    <p>
-                        <a href="#">how do I play?</a>
-                    </p>
-                </div>
+                <h2 className={styles.subtitle}>A game for imagining potential futures.</h2>
+                <p className={styles.description}>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt
+                    suscipit illo id odio repellendus culpa excepturi, illum ducimus.
+                </p>
+                <Link href="/play">
+                    <button className={`generate-button ${styles.playButton}`}>play now</button>
+                </Link>
+                <p>
+                    <a className={styles.howToPlay} href="#">
+                        how do I play?
+                    </a>
+                </p>
             </main>
 
             <footer className={styles.footer}>
