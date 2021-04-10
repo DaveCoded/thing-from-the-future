@@ -2,8 +2,8 @@
     font-family: 'Futura Condensed';
     text-align: center;
     text-transform: uppercase;
-    height: 260px;
-    width: 170px;
+    height: 290px;
+    width: 200px;
     border: 8px solid black;
     border-radius: 10px;
     display: flex;
@@ -15,10 +15,10 @@
 .BaseCard p {
     font-family: 'Futura Condensed';
     color: white;
-    font-size: 17px;
+    font-size: 1.125rem;
     letter-spacing: 1.8px;
 }
 
 .BaseCard h3 {
-    font-size: 24px;
+    font-size: 2rem;
 }

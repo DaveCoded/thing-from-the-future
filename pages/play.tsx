@@ -46,34 +46,15 @@ export default function Play() {
                 <div
                     style={{
                         display: 'flex',
-                        justifyContent: 'center',
+                        justifyContent: 'space-between',
+                        width: '90%',
                         margin: '8rem 0 3rem 0'
                     }}
                 >
-                    <div
-                        style={{
-                            marginRight: '24px'
-                        }}
-                    >
-                        <ObjectCard value={objectValue} />
-                    </div>
-                    <div
-                        style={{
-                            marginRight: '24px'
-                        }}
-                    >
-                        <MoodCard value={moodValue} />
-                    </div>
-                    <div
-                        style={{
-                            marginRight: '24px'
-                        }}
-                    >
-                        <TerrainCard value1={terrainValue1} value2={terrainValue2} />
-                    </div>
-                    <div>
-                        <ArcCard value={arcValue} duration={arcDuration} />
-                    </div>
+                    <ObjectCard value={objectValue} />
+                    <MoodCard value={moodValue} />
+                    <TerrainCard value1={terrainValue1} value2={terrainValue2} />
+                    <ArcCard value={arcValue} duration={arcDuration} />
                 </div>
                 <button className="generate-button" onClick={generateNewPlayerCards}>
                     Deal new cards

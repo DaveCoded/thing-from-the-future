@@ -6,7 +6,7 @@ interface Props {
     value2: string
 }
 
-const TRANSLATE_TOP = '50px'
+const PX_FROM_EDGE = '10px'
 
 const TerrainCard = ({ value1, value2 }: Props) => {
     const isWildard = [value1, value2].includes('wildcard')
@@ -33,21 +33,39 @@ const TerrainCard = ({ value1, value2 }: Props) => {
 
     return (
         <BaseCard backgroundColor="#27AEEE">
-            <div style={{ position: 'relative', top: `-${TRANSLATE_TOP}` }}>
-                <p style={{ marginBottom: '3px' }}>Terrain</p>
-                <h3>{value1}</h3>
-            </div>
             <div
                 style={{
-                    backgroundColor: 'black',
+                    position: 'relative',
                     width: '100%',
-                    height: '4px',
-                    transform: 'skewY(6deg)'
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center'
                 }}
-            />
-            <div style={{ position: 'relative', top: TRANSLATE_TOP, transform: 'rotate(180deg)' }}>
-                <p style={{ marginBottom: '3px' }}>Terrain</p>
-                <h3>{value2}</h3>
+            >
+                <div style={{ position: 'absolute', top: PX_FROM_EDGE }}>
+                    <p style={{ marginBottom: '3px' }}>Terrain</p>
+                    <h3>{value1}</h3>
+                </div>
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: '50%',
+                        backgroundColor: 'black',
+                        width: '100%',
+                        height: '4px',
+                        transform: 'skewY(6deg)'
+                    }}
+                />
+                <div
+                    style={{
+                        position: 'relative',
+                        bottom: PX_FROM_EDGE,
+                        transform: 'rotate(180deg)'
+                    }}
+                >
+                    <p style={{ marginBottom: '3px' }}>Terrain</p>
+                    <h3>{value2}</h3>
+                </div>
             </div>
         </BaseCard>
     )
