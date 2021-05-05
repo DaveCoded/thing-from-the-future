@@ -7,6 +7,7 @@ import { getAllCards } from '../helpers/cardHelpers'
 import cardData from '../data/classic-cards.json'
 import { motion } from 'framer-motion'
 import styles from './play.module.css'
+import Timer from '../components/Timer'
 
 export default function Play() {
     const initialCardState = getAllCards(cardData)
@@ -43,6 +44,9 @@ export default function Play() {
                     alignItems: 'center'
                 }}
             >
+                <div>
+                    <Timer />
+                </div>
                 <div
                     style={{
                         display: 'flex',
