@@ -13,7 +13,7 @@ const Timer = () => {
 
     return (
         <>
-            <div>
+            <div style={{ display: 'flex' }}>
                 <PlayPauseButton start={start} pause={pause} isRunning={status === 'RUNNING'} />
                 <button onClick={reset}>Reset</button>
             </div>

@@ -15,24 +15,34 @@ const Timer = ({ start, pause, isRunning }: Props) => {
         <button className={styles.Button} onClick={handleClick}>
             {isRunning ? (
                 <svg
-                    width="6px"
-                    height="8px"
-                    viewBox="0 0 6 8"
+                    width="12px"
+                    height="14px"
+                    viewBox="0 0 12 14"
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g
-                            id="Dribbble-Light-Preview"
-                            transform="translate(-227.000000, -3765.000000)"
-                            fill="#000000"
-                        >
-                            <g id="icons" transform="translate(56.000000, 160.000000)">
-                                <path
-                                    d="M172,3605 C171.448,3605 171,3605.448 171,3606 L171,3612 C171,3612.552 171.448,3613 172,3613 C172.552,3613 173,3612.552 173,3612 L173,3606 C173,3605.448 172.552,3605 172,3605 M177,3606 L177,3612 C177,3612.552 176.552,3613 176,3613 C175.448,3613 175,3612.552 175,3612 L175,3606 C175,3605.448 175.448,3605 176,3605 C176.552,3605 177,3605.448 177,3606"
-                                    id="pause-[#1006]"
-                                ></path>
+                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Rounded" transform="translate(-650.000000, -955.000000)">
+                            <g id="AV" transform="translate(100.000000, 852.000000)">
+                                <g
+                                    id="-Round-/-AV-/-pause"
+                                    transform="translate(544.000000, 98.000000)"
+                                >
+                                    <g>
+                                        <rect
+                                            id="Rectangle-Copy-67"
+                                            x="0"
+                                            y="0"
+                                            width="24"
+                                            height="24"
+                                        ></rect>
+                                        <path
+                                            d="M8,19 C9.1,19 10,18.1 10,17 L10,7 C10,5.9 9.1,5 8,5 C6.9,5 6,5.9 6,7 L6,17 C6,18.1 6.9,19 8,19 Z M14,7 L14,17 C14,18.1 14.9,19 16,19 C17.1,19 18,18.1 18,17 L18,7 C18,5.9 17.1,5 16,5 C14.9,5 14,5.9 14,7 Z"
+                                            id="🔹Icon-Color"
+                                            fill="#1D1D1D"
+                                        ></path>
+                                    </g>
+                                </g>
                             </g>
                         </g>
                     </g>
