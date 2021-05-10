@@ -123,6 +123,14 @@ p {
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
 p {
     font-family: 'AvenirNext', sans-serif;
 }

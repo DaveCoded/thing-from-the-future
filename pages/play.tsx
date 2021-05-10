@@ -41,24 +41,32 @@ export default function Play() {
                 style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    marginTop: '8rem'
                 }}
             >
-                <div>
-                    <Timer />
-                </div>
                 <div
                     style={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         width: '90%',
-                        margin: '8rem 0 3rem 0'
+                        marginBottom: '3rem',
+                        position: 'relative'
                     }}
                 >
                     <ObjectCard value={objectValue} />
                     <MoodCard value={moodValue} />
                     <TerrainCard value1={terrainValue1} value2={terrainValue2} />
                     <ArcCard value={arcValue} duration={arcDuration} />
+                    <div
+                        style={{
+                            position: 'absolute',
+                            right: 0,
+                            top: '-5rem'
+                        }}
+                    >
+                        <Timer />
+                    </div>
                 </div>
                 <button className="generate-button" onClick={generateNewPlayerCards}>
                     Deal new cards

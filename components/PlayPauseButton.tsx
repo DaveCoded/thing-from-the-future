@@ -21,7 +21,7 @@ const Timer = ({ start, pause, isRunning }: Props) => {
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g id="Rounded" transform="translate(-650.000000, -955.000000)">
                             <g id="AV" transform="translate(100.000000, 852.000000)">
                                 <g
@@ -55,7 +55,7 @@ const Timer = ({ start, pause, isRunning }: Props) => {
                     version="1.1"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g id="Rounded" transform="translate(-753.000000, -955.000000)">
                             <g id="AV" transform="translate(100.000000, 852.000000)">
                                 <g
