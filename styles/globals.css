@@ -119,8 +119,12 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+div,
+main,
+section {
     margin: 0;
+    padding: 0;
 }
 
 button {
@@ -136,7 +140,9 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-family: 'Futura', sans-serif;
     font-weight: 500;
 }

@@ -5,7 +5,6 @@ import ArcCard from '../components/ArcCard'
 import { useState } from 'react'
 import { getAllCards } from '../helpers/cardHelpers'
 import cardData from '../data/classic-cards.json'
-import { motion } from 'framer-motion'
 import styles from './play.module.css'
 import Timer from '../components/Timer'
 
@@ -29,13 +28,7 @@ export default function Play() {
     return (
         <main className={styles.main}>
             <nav className={styles.nav}>
-                <motion.h2
-                    layoutId="ttftf-title"
-                    initial={false}
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-                >
-                    The Thing From the Future
-                </motion.h2>
+                <h2>The Thing From the Future</h2>
             </nav>
             <div
                 style={{
