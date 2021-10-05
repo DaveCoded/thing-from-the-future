@@ -1,0 +1,25 @@
+.container p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 1.3rem;
+    width: 85%;
+}
+
+.heading {
+    font-family: 'Futura PT';
+    font-weight: 500;
+    font-size: 44px;
+    margin-bottom: 2rem;
+}
+
+.twoColumn {
+    display: flex;
+}
+
+.column {
+    width: 50%;
+}
+
+.column img {
+    margin-left: 15%;
+}
