@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import AimOfTheGame from '../components/sections/AimOfTheGame'
+import CardsSection from '../components/sections/CardsSection'
 
 export default function Home() {
     return (
@@ -31,10 +32,11 @@ export default function Home() {
                 </section>
 
                 <section className={styles.howToPlaySection}>
-                    <h2 className={styles.howToPlayHeading} id="how-to-play">
-                        How to play
-                    </h2>
                     <AimOfTheGame />
+                </section>
+
+                <section className={styles.cardsSection}>
+                    <CardsSection />
                 </section>
             </main>
         </div>

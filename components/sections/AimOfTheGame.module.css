@@ -1,8 +1,24 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
 .container p {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 1.3rem;
     width: 85%;
+}
+
+.howToPlayHeading {
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 1.3rem 3rem;
+    border: 5px solid black;
+    background-color: white;
+    width: fit-content;
+    margin: 8rem auto;
 }
 
 .heading {
