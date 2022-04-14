@@ -8,6 +8,7 @@ import ArcCard from '../components/ArcCard'
 import { getAllCards } from '../helpers/cardHelpers'
 import cardData from '../data/classic-cards.json'
 import Timer from '../components/Timer'
+import ActionButton from '../components/ActionButton'
 
 export default function Play() {
     const initialCardState = getAllCards(cardData)
@@ -62,9 +63,7 @@ export default function Play() {
                         <Timer />
                     </div>
                 </div>
-                <button className="generate-button" onClick={generateNewPlayerCards}>
-                    Deal new cards
-                </button>
+                <ActionButton onClick={generateNewPlayerCards}>Deal new cards</ActionButton>
             </div>
         </MaxWidthWrapper>
     )

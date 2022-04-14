@@ -1,4 +1,4 @@
-import styles from './PlayPauseButton.module.css'
+import styled from 'styled-components'
 
 interface Props {
     start: () => void
@@ -12,7 +12,7 @@ const Timer = ({ start, pause, isRunning }: Props) => {
     }
 
     return (
-        <button className={styles.Button} onClick={handleClick}>
+        <Button onClick={handleClick}>
             {isRunning ? (
                 <svg
                     width="12px"
@@ -82,8 +82,15 @@ const Timer = ({ start, pause, isRunning }: Props) => {
                     </g>
                 </svg>
             )}
-        </button>
+        </Button>
     )
 }
+
+const Button = styled.button`
+    line-height: 0;
+    border: 2px solid #1d1d1d;
+    padding: 0.2rem 0.24rem 0.2rem 0.3rem;
+    border-radius: 4px;
+`
 
 export default Timer

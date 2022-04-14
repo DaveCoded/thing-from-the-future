@@ -1,5 +1,5 @@
+import { Wrapper, ArcCardP, CommonCardValue } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
-import styles from './ObjectCard.module.css'
 
 interface Props {
     value1: string
@@ -14,10 +14,10 @@ const TerrainCard = ({ value1, value2 }: Props) => {
     if (isWildard) {
         return (
             <BaseCard backgroundColor="#27AEEE">
-                <div className={styles.Container}>
-                    <p>Terrain</p>
-                    <h3>wildcard</h3>
-                    <p
+                <Wrapper>
+                    <ArcCardP>Terrain</ArcCardP>
+                    <CommonCardValue>wildcard</CommonCardValue>
+                    <ArcCardP
                         style={{
                             position: 'relative',
                             top: '35px',
@@ -25,8 +25,8 @@ const TerrainCard = ({ value1, value2 }: Props) => {
                         }}
                     >
                         topic or location of your choice
-                    </p>
-                </div>
+                    </ArcCardP>
+                </Wrapper>
             </BaseCard>
         )
     }
@@ -43,8 +43,8 @@ const TerrainCard = ({ value1, value2 }: Props) => {
                 }}
             >
                 <div style={{ position: 'absolute', top: PX_FROM_EDGE }}>
-                    <p style={{ marginBottom: '3px' }}>Terrain</p>
-                    <h3>{value1}</h3>
+                    <ArcCardP style={{ marginBottom: '3px' }}>Terrain</ArcCardP>
+                    <CommonCardValue>{value1}</CommonCardValue>
                 </div>
                 <div
                     style={{
@@ -63,8 +63,8 @@ const TerrainCard = ({ value1, value2 }: Props) => {
                         transform: 'rotate(180deg)'
                     }}
                 >
-                    <p style={{ marginBottom: '3px' }}>Terrain</p>
-                    <h3>{value2}</h3>
+                    <ArcCardP style={{ marginBottom: '3px' }}>Terrain</ArcCardP>
+                    <CommonCardValue>{value2}</CommonCardValue>
                 </div>
             </div>
         </BaseCard>

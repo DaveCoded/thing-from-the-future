@@ -1,3 +1,4 @@
+import { ArcCardP, ArcCardValue } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
 
 interface Props {
@@ -8,9 +9,9 @@ interface Props {
 const ArcCard = ({ value, duration }: Props) => (
     <BaseCard backgroundColor="#7DBF30">
         <div>
-            <p>Arc</p>
-            <h3>{value}</h3>
-            <p>{duration}</p>
+            <ArcCardP>Arc</ArcCardP>
+            <ArcCardValue>{value}</ArcCardValue>
+            <ArcCardP>{duration}</ArcCardP>
         </div>
     </BaseCard>
 )

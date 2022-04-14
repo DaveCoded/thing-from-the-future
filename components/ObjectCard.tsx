@@ -1,5 +1,5 @@
+import { Wrapper, CommonCardP, CommonCardValue } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
-import styles from './ObjectCard.module.css'
 
 interface Props {
     value: string
@@ -7,11 +7,11 @@ interface Props {
 
 const ObjectCard = ({ value }: Props) => (
     <BaseCard backgroundColor="#EB5469">
-        <div className={styles.Container}>
-            <p>Object</p>
-            <h3>{value}</h3>
+        <Wrapper>
+            <CommonCardP>Object</CommonCardP>
+            <CommonCardValue>{value}</CommonCardValue>
             {value === 'wildcard' ? (
-                <p
+                <CommonCardP
                     style={{
                         position: 'relative',
                         top: '35px',
@@ -19,9 +19,9 @@ const ObjectCard = ({ value }: Props) => (
                     }}
                 >
                     artifact of your choice
-                </p>
+                </CommonCardP>
             ) : null}
-        </div>
+        </Wrapper>
     </BaseCard>
 )
 
