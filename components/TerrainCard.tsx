@@ -1,12 +1,11 @@
-import { Wrapper, ArcCardP, CommonCardValue } from '../styles/cardStyles'
+import styled from 'styled-components'
+import { Wrapper, ArcCardP, CommonCardValue, CommonCardP } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
 
 interface Props {
     value1: string
     value2: string
 }
-
-const PX_FROM_EDGE = '10px'
 
 const TerrainCard = ({ value1, value2 }: Props) => {
     const isWildard = [value1, value2].includes('wildcard')
@@ -17,15 +16,7 @@ const TerrainCard = ({ value1, value2 }: Props) => {
                 <Wrapper>
                     <ArcCardP>Terrain</ArcCardP>
                     <CommonCardValue>wildcard</CommonCardValue>
-                    <ArcCardP
-                        style={{
-                            position: 'relative',
-                            top: '35px',
-                            textTransform: 'lowercase'
-                        }}
-                    >
-                        topic or location of your choice
-                    </ArcCardP>
+                    <Description>topic or location of your choice</Description>
                 </Wrapper>
             </BaseCard>
         )
@@ -33,42 +24,58 @@ const TerrainCard = ({ value1, value2 }: Props) => {
 
     return (
         <BaseCard backgroundColor="#27AEEE">
-            <div
-                style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    justifyContent: 'center'
-                }}
-            >
-                <div style={{ position: 'absolute', top: PX_FROM_EDGE }}>
-                    <ArcCardP style={{ marginBottom: '3px' }}>Terrain</ArcCardP>
+            <TerrainWrapper>
+                <TopPosition>
+                    <CardType>Terrain</CardType>
                     <CommonCardValue>{value1}</CommonCardValue>
-                </div>
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: '50%',
-                        backgroundColor: 'black',
-                        width: '100%',
-                        height: '4px',
-                        transform: 'skewY(6deg)'
-                    }}
-                />
-                <div
-                    style={{
-                        position: 'relative',
-                        bottom: PX_FROM_EDGE,
-                        transform: 'rotate(180deg)'
-                    }}
-                >
-                    <ArcCardP style={{ marginBottom: '3px' }}>Terrain</ArcCardP>
+                </TopPosition>
+                <SkewedDivider />
+                <BottomPosition>
+                    <CardType>Terrain</CardType>
                     <CommonCardValue>{value2}</CommonCardValue>
-                </div>
-            </div>
+                </BottomPosition>
+            </TerrainWrapper>
         </BaseCard>
     )
 }
+
+const Description = styled(CommonCardP)`
+    position: relative;
+    top: 35px;
+    text-transform: lowercase;
+`
+
+const TerrainWrapper = styled.div`
+    --offset: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+`
+
+const TopPosition = styled.div`
+    position: absolute;
+    top: var(--offset);
+`
+
+const BottomPosition = styled.div`
+    position: relative;
+    bottom: var(--offset);
+    transform: rotate(180deg);
+`
+
+const CardType = styled(ArcCardP)`
+    margin-bottom: 3px;
+`
+
+const SkewedDivider = styled.div`
+    position: absolute;
+    top: 50%;
+    background-color: black;
+    width: 100%;
+    height: 4px;
+    transform: skewY(6deg);
+`
 
 export default TerrainCard

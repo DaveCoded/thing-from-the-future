@@ -32,39 +32,18 @@ export default function Play() {
             <Nav>
                 <h2>The Thing From the Future</h2>
             </Nav>
-            <div
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    marginTop: '8rem'
-                }}
-            >
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        width: '90%',
-                        marginBottom: '3rem',
-                        position: 'relative'
-                    }}
-                >
+            <Wrapper>
+                <CardsWrapper>
                     <ObjectCard value={objectValue} />
                     <MoodCard value={moodValue} />
                     <TerrainCard value1={terrainValue1} value2={terrainValue2} />
                     <ArcCard value={arcValue} duration={arcDuration} />
-                    <div
-                        style={{
-                            position: 'absolute',
-                            right: 0,
-                            top: '-5rem'
-                        }}
-                    >
+                    <TimerWrapper>
                         <Timer />
-                    </div>
-                </div>
+                    </TimerWrapper>
+                </CardsWrapper>
                 <ActionButton onClick={generateNewPlayerCards}>Deal new cards</ActionButton>
-            </div>
+            </Wrapper>
         </MaxWidthWrapper>
     )
 }
@@ -76,4 +55,25 @@ const MaxWidthWrapper = styled.main`
 
 const Nav = styled.nav`
     margin: 1.5rem 0;
+`
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+`
+
+const CardsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 3rem;
+    position: relative;
+`
+
+const TimerWrapper = styled.div`
+    position: absolute;
+    right: 0;
+    top: -5rem;
 `

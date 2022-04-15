@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import { useTimer } from 'use-timer'
 import PlayPauseButton from './PlayPauseButton'
 
@@ -12,24 +13,36 @@ const Timer = () => {
     seconds = +seconds < 10 ? '0' + seconds : seconds
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-            <button
-                onClick={reset}
-                style={{
-                    marginBottom: '.5rem',
-                    padding: '0.4rem 0.8rem',
-                    border: '2px solid black',
-                    borderRadius: '4px'
-                }}
-            >
-                Reset
-            </button>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span style={{ marginRight: '1rem' }}>{`${minutes}:${seconds}`}</span>
+        <Wrapper>
+            <ResetButton onClick={reset}>Reset</ResetButton>
+            <TimerWrapper>
+                <Countdown>{`${minutes}:${seconds}`}</Countdown>
                 <PlayPauseButton start={start} pause={pause} isRunning={status === 'RUNNING'} />
-            </div>
-        </div>
+            </TimerWrapper>
+        </Wrapper>
     )
 }
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+`
+
+const ResetButton = styled.button`
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid black;
+    border-radius: 4px;
+`
+
+const TimerWrapper = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const Countdown = styled.span`
+    margin-right: 1rem;
+`
 
 export default Timer

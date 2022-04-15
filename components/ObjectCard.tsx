@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import { Wrapper, CommonCardP, CommonCardValue } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
 
@@ -10,19 +11,15 @@ const ObjectCard = ({ value }: Props) => (
         <Wrapper>
             <CommonCardP>Object</CommonCardP>
             <CommonCardValue>{value}</CommonCardValue>
-            {value === 'wildcard' ? (
-                <CommonCardP
-                    style={{
-                        position: 'relative',
-                        top: '35px',
-                        textTransform: 'lowercase'
-                    }}
-                >
-                    artifact of your choice
-                </CommonCardP>
-            ) : null}
+            {value === 'wildcard' ? <Description>artifact of your choice</Description> : null}
         </Wrapper>
     </BaseCard>
 )
+
+const Description = styled(CommonCardP)`
+    position: relative;
+    top: 35px;
+    text-transform: lowercase;
+`
 
 export default ObjectCard
