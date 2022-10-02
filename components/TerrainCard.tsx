@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Wrapper, ArcCardP, CommonCardValue, CommonCardP } from '../styles/cardStyles'
 import BaseCard from './BaseCard'
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const TerrainCard = ({ value1, value2 }: Props) => {
+    const [flipped, setFlipped] = useState(false)
     const isWildard = [value1, value2].includes('wildcard')
 
     if (isWildard) {
@@ -24,7 +26,7 @@ const TerrainCard = ({ value1, value2 }: Props) => {
 
     return (
         <BaseCard backgroundColor="#27AEEE">
-            <TerrainWrapper>
+            <TerrainWrapper onClick={() => setFlipped(!flipped)} flipped={flipped}>
                 <TopPosition>
                     <CardType>Terrain</CardType>
                     <CommonCardValue>{value1}</CommonCardValue>
@@ -45,13 +47,14 @@ const Description = styled(CommonCardP)`
     text-transform: lowercase;
 `
 
-const TerrainWrapper = styled.div`
+const TerrainWrapper = styled.div<{ flipped: boolean }>`
     --offset: 10px;
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    transform: ${(props) => (props.flipped ? 'rotate(180deg)' : 'rotate(0deg)')};
 `
 
 const TopPosition = styled.div`
@@ -71,7 +74,7 @@ const CardType = styled(ArcCardP)`
 
 const SkewedDivider = styled.div`
     position: absolute;
-    top: 50%;
+    top: 49.2%;
     background-color: black;
     width: 100%;
     height: 4px;
